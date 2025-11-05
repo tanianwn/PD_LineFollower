@@ -77,7 +77,7 @@ but the system can be easily adapted to custom boards or different hardware setu
 ![Robot following the line](images/car1.JPG)
 
 ---
-## hARDWARE
+## See more 
 
 See more of the hardware, build, schematic, simulation, etc. on the official Repo https://github.com/IRS-tecMty/tir-lineFollower
 
