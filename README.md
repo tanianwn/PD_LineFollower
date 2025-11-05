@@ -1,69 +1,69 @@
-# Seguidor de Línea con PID Adaptativo
+# Line Follower with Adaptive PID Control
 
-Proyecto de un seguidor de línea basado en control PID, con lectura de sensores IR a través de un multiplexor.  
-El código está hecho en C++ para Arduino y ajusta sus parámetros de forma dinámica según la posición de la línea.
-
----
-
-## Características
-
-- Control PID adaptativo según el tipo de curva o pérdida de línea.  
-- Lectura de sensores IR mediante un multiplexor (menos pines usados).  
-- Parada automática al detectar negro durante más de 0.3 segundos.  
-- Corrección suave de velocidad entre motores.  
-- Priorización de sensores centrales para mantener trayectorias rectas.  
+This project implements a **line follower robot** using PID control and IR sensor readings through a multiplexer.  
+The code is written in **C++ for Arduino** and dynamically adjusts its parameters based on the line’s position.
 
 ---
 
-## Cómo funciona
+## Features
 
-1. Los sensores IR leen la línea y envían valores (0 o 1) al microcontrolador.  
-2. Se calcula un error promedio ponderado según la posición de los sensores activos.  
-3. El controlador PID genera una señal de corrección que ajusta la velocidad de cada motor.  
-4. Si los sensores detectan solo negro por más de 0.3 s, el robot se detiene.  
+- Adaptive PID control depending on the type of curve or line loss.  
+- IR sensor reading via multiplexer (fewer pins required).  
+- Automatic stop when black is detected for more than 0.3 seconds.  
+- Smooth speed correction between motors.  
+- Central sensor prioritization to maintain straight paths.  
 
 ---
 
-## Conexiones principales
+## How It Works
 
-| Componente | Pines |
-|-------------|--------|
-| Motores A/B | 18, 19, 20, 21 |
+1. The IR sensors read the line and send values (0 or 1) to the microcontroller.  
+2. A weighted average error is calculated based on the active sensors.  
+3. The PID controller generates a correction signal that adjusts each motor’s speed.  
+4. If all sensors detect black for more than 0.3 s, the robot stops.  
+
+---
+
+## Main Connections
+
+| Component | Pins |
+|------------|------|
+| Motors A/B | 18, 19, 20, 21 |
 | Encoders | 2, 3, 22, 23 |
-| Multiplexor | S0: 4, S1: 5, S2: 0, Y: 1 |
-| Botón inicio/parada | 14 |
+| Multiplexer | S0: 4, S1: 5, S2: 0, Y: 1 |
+| Start/Stop Button | 14 |
 
 ---
 
-## PID (valores base)
+## PID (Base Values)
 
-| Parámetro | Valor |
+| Parameter | Value |
 |------------|--------|
 | Kp | 9.9 |
 | Ki | 0.00000115 |
 | Kd | 1.5 |
 
-Estos valores funcionan bien como punto de partida, pero se pueden ajustar según la pista o la respuesta de los motores.
+These values work well as a starting point but can be fine-tuned depending on the track or motor response.
 
 ---
 
-## Uso
+## Usage
 
-1. Cargar el código en el Arduino.  
-2. Colocar el robot sobre la pista.  
-3. Presionar el botón de inicio.  
-4. El robot seguirá la línea automáticamente.  
-5. Si detecta una zona negra por más de 0.3 s, se detiene.
+1. Upload the code to the Arduino.  
+2. Place the robot on the track.  
+3. Press the start button.  
+4. The robot will automatically follow the line.  
+5. If it detects a black area for more than 0.3 s, it stops.  
 
 ---
 
-## Requisitos
+## Requirements
 
-- Arduino (UNO, MEGA o similar)  
-- 8 sensores IR  
-- Multiplexor (CD4051 o similar)  
-- Driver de motores (L298N o L293D)  
-- 2 motores DC con encoders  
-- Fuente de alimentación estable
+- Arduino (UNO, MEGA, or similar)  
+- 8 IR sensors  
+- Multiplexer (CD4051 or similar)  
+- Motor driver (L298N or L293D)  
+- 2 DC motors with encoders  
+- Stable power supply  
 
 ---
