@@ -73,4 +73,9 @@ The PCB used in this project was designed by **Tecnológico de Monterrey**,
 but the system can be easily adapted to custom boards or different hardware setups.
 
 ---
+## Image
+![Robot following the line](images/car1.jpg)
+
+
+---
 
