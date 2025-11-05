@@ -1,6 +1,6 @@
 # Line Follower with Adaptive PID Control
 
-This project implements a **line follower robot** using PID control and IR sensor readings through a multiplexer.  
+This project implements a **line follower robot** using PID (more like PD) control and IR sensor readings through a multiplexer.  
 The code is written in **C++ for Arduino** and dynamically adjusts its parameters based on the line’s position.
 
 ---
