@@ -74,7 +74,7 @@ but the system can be easily adapted to custom boards or different hardware setu
 
 ---
 ## Image
-![Robot following the line](images/car1.jpg)
+![Robot following the line](images/car1.JPG)
 
 
 ---
