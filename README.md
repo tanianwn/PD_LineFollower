@@ -67,3 +67,10 @@ These values work well as a starting point but can be fine-tuned depending on th
 - Stable power supply  
 
 ---
+## Notes
+
+The PCB used in this project was designed by **Tecnológico de Monterrey**,  
+but the system can be easily adapted to custom boards or different hardware setups.
+
+---
+
