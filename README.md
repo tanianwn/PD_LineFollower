@@ -57,7 +57,7 @@ These values work well as a starting point but can be fine-tuned depending on th
 
 ---
 
-## Requirements
+## MATERIALS 
 
 - Arduino (UNO, MEGA, or similar)  
 - 8 IR sensors  
